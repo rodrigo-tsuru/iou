@@ -73,15 +73,15 @@ function Person(name, paid) {
     this.delta = paid - perPersonCost;
 
     if (this.delta > 0) {
-      this.div.append("<p class=\"personblock\">" + this.name + " spent <span class=\"amount\">" + curr(this.paid) + "</span> and is owed <span class=\"payment amount\">" + curr(this.delta) + "</span></p>");
+      this.div.append("<p class=\"personblock\">" + this.name + " gastou <span class=\"amount\">" + curr(this.paid) + "</span> e recebe <span class=\"payment amount\">" + curr(this.delta) + "</span></p>");
       this.owed = true;
     }
     else if (this.delta < 0) {
-      this.div.append("<p class=\"personblock\">" + this.name + " spent <span class=\"amount\">" + curr(this.paid) + "</span> and owes <span class=\"debt amount\">" + curr(-this.delta) + "</span></p>");
+      this.div.append("<p class=\"personblock\">" + this.name + " gastou <span class=\"amount\">" + curr(this.paid) + "</span> e deve <span class=\"debt amount\">" + curr(-this.delta) + "</span></p>");
       this.owes = true;
     }
     else {
-      this.div.append("<p class=\"personblock\">" + this.name + " spent <span class=\"amount\">" + curr(this.paid) + "</span> which is just the right amount</p>")
+      this.div.append("<p class=\"personblock\">" + this.name + " gastou <span class=\"amount\">" + curr(this.paid) + "</span> que &eacute; o valor exato</p>")
     }
   };
 

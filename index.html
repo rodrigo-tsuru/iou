@@ -62,8 +62,8 @@
           var receiver = model.popReceiver();
           while(receiver && receiver.getAmountToReceive() > 0) {
             var payment = payer.pay(receiver);
-            payer.div.append("<p class=\"personblock correction\"><span class=\"amount\">" + curr(payment)  + "</span> to " + receiver.name + "</p>");
-            receiver.div.append("<p class=\"personblock correction\"><span class=\"amount\">"+curr(payment) + "</span> from " + payer.name + "</p>");
+            payer.div.append("<p class=\"personblock correction\"><span class=\"amount\">" + curr(payment)  + "</span> para " + receiver.name + "</p>");
+            receiver.div.append("<p class=\"personblock correction\"><span class=\"amount\">"+curr(payment) + "</span> de " + payer.name + "</p>");
             if(payer.getAmountToPay() > receiver.getAmountToReceive()) {
               // payer owes more than receiver gets
               // so payer pays off receiver, and we advance to the next receiver
@@ -88,7 +88,7 @@
               curr(total) +
               "</span></p><p class=\"percap\"><span class=\"amount\">" +
               curr(perPerson) +
-              "</span> per person</p>";
+              "</span> por pessoa</p>";
     }
 
   </script>
@@ -109,8 +109,8 @@
       <table>
         <thead>
         <tr>
-          <td>Name</td>
-          <td>Amount</td>
+          <td>Nome</td>
+          <td>Valor</td>
         </tr>
         </thead>
         <tr class="expenseline">
